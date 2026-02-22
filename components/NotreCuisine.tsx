@@ -137,7 +137,7 @@ export default function NotreCuisine() {
               {/* Badge overlay */}
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="bg-cream/90 backdrop-blur-sm rounded-2xl px-5 py-4">
-                  <p className="font-serif text-lg text-charcoal leading-snug">
+                  <p className="font-serif text-lg text-white leading-snug" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
                     "Ce qu'on te sert, c'est ce qu'on mangerait nous-mêmes."
                   </p>
                   <p className="font-sans text-xs text-charcoal/50 mt-2">— Augustin</p>
