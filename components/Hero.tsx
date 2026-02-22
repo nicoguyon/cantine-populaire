@@ -24,7 +24,7 @@ export default function Hero() {
       {/* Parallax image */}
       <div ref={wrapRef} className="absolute inset-[-18%] will-change-transform">
         <Image
-          src="/images/cantine-hero.webp"
+          src="/images/cantine-hero-v2.webp"
           alt="La Cantine Populaire, Clichy"
           fill
           priority
