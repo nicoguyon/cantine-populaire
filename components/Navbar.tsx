@@ -50,30 +50,12 @@ export default function Navbar() {
             <Image
               src="/images/cantine-logo.svg"
               alt="Cantine Populaire"
-              width={48}
-              height={48}
-              className={`h-10 w-10 md:h-12 md:w-12 transition-all duration-300 group-hover:scale-105 ${
+              width={96}
+              height={96}
+              className={`h-16 w-16 md:h-20 md:w-20 transition-all duration-300 group-hover:scale-105 ${
                 scrolled ? "" : "brightness-0 invert"
               }`}
             />
-            <div className="flex flex-col leading-none">
-              <span
-                className={`font-chalk text-2xl md:text-3xl tracking-wide transition-colors duration-300 ${
-                  scrolled ? "text-charcoal" : "text-white"
-                }`}
-                style={{ lineHeight: 1.1 }}
-              >
-                Cantine
-              </span>
-              <span
-                className={`font-chalk text-2xl md:text-3xl tracking-wide transition-colors duration-300 ${
-                  scrolled ? "text-sage" : "text-white"
-                }`}
-                style={{ lineHeight: 1.1 }}
-              >
-                Populaire
-              </span>
-            </div>
           </Link>
 
           {/* ─── DESKTOP NAV ─── */}
