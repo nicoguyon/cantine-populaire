@@ -50,9 +50,9 @@ export default function Navbar() {
             <Image
               src="/images/cantine-logo.svg"
               alt="Cantine Populaire"
-              width={192}
-              height={192}
-              className={`h-32 w-32 md:h-40 md:w-40 transition-all duration-300 group-hover:scale-105 ${
+              width={120}
+              height={120}
+              className={`h-20 w-20 md:h-24 md:w-24 transition-all duration-300 group-hover:scale-105 ${
                 scrolled ? "" : "brightness-0 invert"
               }`}
             />

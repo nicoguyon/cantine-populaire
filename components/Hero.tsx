@@ -41,7 +41,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="absolute top-20 left-[55%] md:left-1/2 -translate-x-1/2 z-10"
+        className="absolute top-28 left-[55%] md:left-1/2 -translate-x-1/2 z-10"
       >
         <span
           className="text-white/80 text-[11px] font-sans tracking-widest uppercase"
