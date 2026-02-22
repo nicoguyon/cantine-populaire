@@ -16,7 +16,7 @@ export default function Hero() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const shadowText = { textShadow: "0 3px 18px rgba(0,0,0,0.75)" } as const;
+  const shadowText = { textShadow: "0 4px 24px rgba(0,0,0,0.9), 0 2px 8px rgba(0,0,0,0.7), 0 0 40px rgba(0,0,0,0.5)" } as const;
 
   return (
     <section className="relative h-screen min-h-[680px] flex flex-col justify-end overflow-hidden">
@@ -24,7 +24,7 @@ export default function Hero() {
       {/* Parallax image */}
       <div ref={wrapRef} className="absolute inset-[-18%] will-change-transform">
         <Image
-          src="/images/cantine-hero-v2.webp"
+          src="/images/cantine-hero.webp"
           alt="La Cantine Populaire, Clichy"
           fill
           priority
@@ -34,7 +34,7 @@ export default function Hero() {
       </div>
 
       {/* Gradient overlay — assombrit UNIQUEMENT le bas, image visible en haut */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
 
       {/* Badge Tripadvisor — SOUS la navbar, petit */}
       <motion.div
@@ -70,7 +70,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.65, ease: [0.22, 1, 0.36, 1] }}
-          className="font-sans italic text-white text-xl md:text-2xl mb-6"
+          className="font-sans italic text-white text-xl md:text-2xl mb-6 font-semibold"
           style={shadowText}
         >
           En mieux.
@@ -81,7 +81,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="font-sans text-white/90 text-base md:text-lg max-w-xl mb-10 leading-relaxed"
+          className="font-sans text-white text-base md:text-lg max-w-xl mb-10 leading-relaxed"
           style={shadowText}
         >
           Augustin et Emilie cuisinent chaque matin ce qu&apos;ils ont envie de te
