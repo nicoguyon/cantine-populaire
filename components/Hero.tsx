@@ -78,64 +78,69 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        {/* Pill badge */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.15 }}
-          className="inline-flex items-center gap-2 bg-cream/10 backdrop-blur-sm border border-cream/25 text-cream/90 text-xs font-medium font-sans px-5 py-2.5 rounded-full mb-10 tracking-widest uppercase"
-        >
-          <span className="w-1.5 h-1.5 rounded-full bg-sage inline-block" />
-          Clichy · Depuis 2018 · Fait maison
-        </motion.div>
+        {/* Backdrop panel derrière tout le texte */}
+        <div className="absolute inset-0 -mx-8 -my-6 bg-black/60 backdrop-blur-md rounded-3xl pointer-events-none" />
 
-        {/* Title — word reveal */}
-        <h1
-          className="font-serif text-5xl md:text-7xl lg:text-8xl text-cream mb-8"
-          style={{ textShadow: '0 2px 20px rgba(0,0,0,0.8), 0 4px 40px rgba(0,0,0,0.5)' }}
-        >
-          {titleWords.map((line, i) => (
-            <WordReveal
-              key={i}
-              line={line}
-              delay={0.35 + i * 0.22}
-            />
-          ))}
-        </h1>
-
-        {/* Subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 1.3 }}
-          className="font-sans text-cream/80 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
-          style={{ textShadow: '0 2px 12px rgba(0,0,0,0.7), 0 4px 24px rgba(0,0,0,0.4)' }}
-        >
-          Augustin et Emilie cuisinent chaque matin ce qu'ils ont envie de te
-          servir le midi. Frais. Fait maison. Généreux.{" "}
-          <span className="text-mustard font-medium">À 15€ tout compris.</span>
-        </motion.p>
-
-        {/* CTAs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.55 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-        >
-          <a
-            href="#menu"
-            className="shimmer-btn font-sans font-semibold text-charcoal text-base px-9 py-4 rounded-full shadow-xl"
+        <div className="relative z-10 py-8 px-4">
+          {/* Pill badge */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="inline-flex items-center gap-2 bg-cream/10 backdrop-blur-sm border border-cream/25 text-cream/90 text-xs font-medium font-sans px-5 py-2.5 rounded-full mb-10 tracking-widest uppercase"
           >
-            Découvrir le menu →
-          </a>
-          <a
-            href="#infos"
-            className="border border-cream/40 text-cream font-sans text-base px-8 py-4 rounded-full hover:bg-cream/10 transition-all duration-250 backdrop-blur-sm"
+            <span className="w-1.5 h-1.5 rounded-full bg-sage inline-block" />
+            Clichy · Depuis 2018 · Fait maison
+          </motion.div>
+
+          {/* Title — word reveal */}
+          <h1
+            className="font-serif text-7xl md:text-8xl lg:text-9xl text-cream mb-8"
+            style={{ textShadow: '0 4px 30px rgba(0,0,0,1), 0 2px 10px rgba(0,0,0,0.9), 0 8px 60px rgba(0,0,0,0.8)' }}
           >
-            Nous trouver
-          </a>
-        </motion.div>
+            {titleWords.map((line, i) => (
+              <WordReveal
+                key={i}
+                line={line}
+                delay={0.35 + i * 0.22}
+              />
+            ))}
+          </h1>
+
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 1.3 }}
+            className="font-sans text-cream text-xl md:text-2xl max-w-2xl mx-auto mb-12 leading-relaxed"
+            style={{ textShadow: '0 4px 30px rgba(0,0,0,1), 0 2px 10px rgba(0,0,0,0.9)' }}
+          >
+            Augustin et Emilie cuisinent chaque matin ce qu'ils ont envie de te
+            servir le midi. Frais. Fait maison. Généreux.{" "}
+            <span className="text-mustard font-medium">À 15€ tout compris.</span>
+          </motion.p>
+
+          {/* CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.55 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+            <a
+              href="#menu"
+              className="shimmer-btn font-sans font-semibold text-charcoal text-base px-9 py-4 rounded-full shadow-xl"
+            >
+              Découvrir le menu →
+            </a>
+            <a
+              href="#infos"
+              className="border border-cream/40 text-cream font-sans text-base px-8 py-4 rounded-full hover:bg-cream/10 transition-all duration-250 backdrop-blur-sm"
+            >
+              Nous trouver
+            </a>
+          </motion.div>
+        </div>
 
         {/* Scroll indicator */}
         <motion.div
