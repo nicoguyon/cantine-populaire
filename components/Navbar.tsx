@@ -56,7 +56,7 @@ export default function Navbar() {
             <div className="flex flex-col leading-none">
               <span
                 className={`font-chalk text-2xl md:text-3xl tracking-wide transition-colors duration-300 ${
-                  scrolled ? "text-charcoal" : "text-cream"
+                  scrolled ? "text-charcoal" : "text-white"
                 }`}
                 style={{ lineHeight: 1.1 }}
               >
@@ -64,7 +64,7 @@ export default function Navbar() {
               </span>
               <span
                 className={`font-chalk text-2xl md:text-3xl tracking-wide transition-colors duration-300 ${
-                  scrolled ? "text-sage" : "text-sage"
+                  scrolled ? "text-sage" : "text-white"
                 }`}
                 style={{ lineHeight: 1.1 }}
               >
