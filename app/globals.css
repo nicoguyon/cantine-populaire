@@ -203,10 +203,10 @@ body {
 /* Chalk font text */
 .ardoise-chalk {
   font-family: var(--font-chalk), cursive;
-  color: rgba(245, 240, 232, 0.92);
+  color: #ffffff;
   text-shadow:
-    0 0 8px rgba(255,255,255,0.12),
-    1px 1px 0 rgba(255,255,255,0.06);
+    0 0 12px rgba(255,255,255,0.20),
+    1px 1px 0 rgba(255,255,255,0.10);
   letter-spacing: 0.02em;
 }
 

@@ -113,13 +113,13 @@ function ChalkCourse({
     >
       <div className="flex items-center gap-3 mb-1.5">
         <span
-          className="font-chalk text-mustard text-sm tracking-widest uppercase"
-          style={{ textShadow: "0 0 8px rgba(212,168,67,0.4)" }}
+          className="font-chalk text-white text-sm tracking-widest uppercase"
+          style={{ textShadow: "0 2px 8px rgba(0,0,0,0.6)" }}
         >
           — {label}
         </span>
         {badge && (
-          <span className="bg-mustard/20 text-mustard font-chalk text-xs px-2 py-0.5 rounded-full border border-mustard/30">
+          <span className="bg-white/20 text-white font-chalk text-xs px-2 py-0.5 rounded-full border border-white/30">
             {badge}
           </span>
         )}
@@ -292,8 +292,8 @@ export default function MenuDuJour() {
                       Entrée · Plat · Dessert
                     </p>
                   </div>
-                  <span className="font-chalk text-mustard text-5xl font-bold"
-                    style={{ textShadow: "0 0 20px rgba(212,168,67,0.3)" }}>
+                  <span className="font-chalk text-white text-5xl font-bold"
+                    style={{ textShadow: "0 0 20px rgba(255,255,255,0.3)" }}>
                     15€
                   </span>
                 </motion.div>

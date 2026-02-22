@@ -16,7 +16,7 @@ export default function Hero() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const shadowText = { textShadow: "0 2px 20px rgba(0,0,0,0.7)" } as const;
+  const shadowText = { textShadow: "0 4px 30px rgba(0,0,0,0.9)" } as const;
 
   return (
     <section className="relative h-screen min-h-[680px] flex flex-col justify-end overflow-hidden">
@@ -33,8 +33,8 @@ export default function Hero() {
         />
       </div>
 
-      {/* Gradient overlay — fort en bas, léger en haut */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
+      {/* Gradient overlay — très fort en bas */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
 
       {/* Badge — en haut */}
       <motion.div
@@ -44,7 +44,7 @@ export default function Hero() {
         className="absolute top-8 left-1/2 -translate-x-1/2 z-10"
       >
         <span
-          className="text-white text-xs font-sans tracking-widest uppercase opacity-80"
+          className="text-white text-xs font-sans tracking-widest uppercase"
           style={shadowText}
         >
           ★ 4.5/5 Tripadvisor · Depuis 2018 · Clichy
@@ -59,7 +59,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-          className="font-chalk text-6xl md:text-8xl text-white leading-tight mb-3"
+          className="font-chalk text-7xl md:text-9xl text-white leading-tight mb-3"
           style={shadowText}
         >
           Ici, on mange comme à la maison.
@@ -70,7 +70,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.65, ease: [0.22, 1, 0.36, 1] }}
-          className="font-sans italic text-white text-2xl md:text-3xl mb-6 opacity-90"
+          className="font-sans italic text-white text-2xl md:text-3xl mb-6"
           style={shadowText}
         >
           En mieux.
@@ -81,7 +81,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="font-sans text-white text-base md:text-lg max-w-xl mb-10 leading-relaxed opacity-85"
+          className="font-sans text-white text-base md:text-lg max-w-xl mb-10 leading-relaxed"
           style={shadowText}
         >
           Augustin et Emilie cuisinent chaque matin ce qu&apos;ils ont envie de te
