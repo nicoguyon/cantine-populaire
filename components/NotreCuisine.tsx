@@ -74,13 +74,13 @@ export default function NotreCuisine() {
       {/* Organic separator top */}
       <div className="flex justify-center mb-20">
         <svg viewBox="0 0 160 28" width="140" className="overflow-visible">
-          <path d="M0,14 Q40,2 80,14 Q120,26 160,14" stroke="#8B9D77" strokeWidth="1.5" fill="none" strokeOpacity="0.35"/>
-          <path d="M20,14 Q60,24 100,14 Q130,6 160,14" stroke="#8B9D77" strokeWidth="0.8" fill="none" strokeOpacity="0.18"/>
-          <circle cx="80" cy="14" r="3.5" fill="#8B9D77" fillOpacity="0.4"/>
-          <circle cx="30" cy="9" r="2" fill="#8B9D77" fillOpacity="0.25"/>
-          <circle cx="130" cy="18" r="2" fill="#8B9D77" fillOpacity="0.25"/>
+          <path d="M0,14 Q40,2 80,14 Q120,26 160,14" stroke="#2C3E6B" strokeWidth="1.5" fill="none" strokeOpacity="0.35"/>
+          <path d="M20,14 Q60,24 100,14 Q130,6 160,14" stroke="#2C3E6B" strokeWidth="0.8" fill="none" strokeOpacity="0.18"/>
+          <circle cx="80" cy="14" r="3.5" fill="#2C3E6B" fillOpacity="0.4"/>
+          <circle cx="30" cy="9" r="2" fill="#2C3E6B" fillOpacity="0.25"/>
+          <circle cx="130" cy="18" r="2" fill="#2C3E6B" fillOpacity="0.25"/>
           {/* little leaf */}
-          <path d="M78,6 Q84,10 80,14 Q76,10 78,6 Z" fill="#8B9D77" fillOpacity="0.3"/>
+          <path d="M78,6 Q84,10 80,14 Q76,10 78,6 Z" fill="#2C3E6B" fillOpacity="0.3"/>
         </svg>
       </div>
 

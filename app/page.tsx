@@ -5,6 +5,7 @@ import NotreCuisine from "@/components/NotreCuisine";
 import MenuDuJour from "@/components/MenuDuJour";
 import Equipe from "@/components/Equipe";
 import Traiteur from "@/components/Traiteur";
+import VideoReel from "@/components/VideoReel";
 import InfosPratiques from "@/components/InfosPratiques";
 import Footer from "@/components/Footer";
 
@@ -27,6 +28,7 @@ export default function Home() {
         <MenuDuJour />
         <Equipe />
         <Traiteur />
+        <VideoReel />
         <InfosPratiques />
       </main>
 

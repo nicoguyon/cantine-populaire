@@ -257,7 +257,7 @@ export default function InfosPratiques() {
                     </div>
                     <div className="ml-auto w-5 h-5 rounded-full bg-sage/20 flex items-center justify-center flex-shrink-0">
                       <svg viewBox="0 0 10 10" className="w-3 h-3 fill-sage">
-                        <path d="M1.5,5 L4,7.5 L8.5,2.5" stroke="#8B9D77" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M1.5,5 L4,7.5 L8.5,2.5" stroke="#2C3E6B" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </div>
                   </div>

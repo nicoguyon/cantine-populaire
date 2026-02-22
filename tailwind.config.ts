@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        sage:    "#8B9D77",
+        sage:    "#2C3E6B",   /* bleu marine — carrelage comptoir */
+        brick:   "#B85C38",   /* brique/terracotta */
         wood:    "#C4A882",
         cream:   "#FAF8F5",
         mustard: "#D4A843",
@@ -20,6 +21,7 @@ const config: Config = {
       fontFamily: {
         serif: ["var(--font-serif)", "Georgia", "serif"],
         sans:  ["var(--font-sans)", "system-ui", "sans-serif"],
+        chalk: ["var(--font-chalk)", "cursive"],
       },
       backgroundImage: {
         "hero-gradient":

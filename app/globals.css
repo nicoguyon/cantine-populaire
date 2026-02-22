@@ -2,12 +2,13 @@
 
 /* ── DESIGN TOKENS ───────────────────────────────────────── */
 :root {
-  --sage:    #8B9D77;
-  --wood:    #C4A882;
-  --cream:   #FAF8F5;
-  --mustard: #D4A843;
-  --charcoal:#2C2C2C;
-  --slate:   #1A1A1A;
+  --sage:    #2C3E6B;   /* → bleu marine (carrelage comptoir) */
+  --brick:   #B85C38;   /* → brique/terracotta (mur briques) */
+  --wood:    #C4A882;   /* → bois naturel (étagères) */
+  --cream:   #FAF8F5;   /* → fond crème */
+  --mustard: #D4A843;   /* → jaune moutarde (lampes) */
+  --charcoal:#2C2C2C;   /* → texte sombre */
+  --slate:   #1A1A1A;   /* → ardoise / noir */
 }
 
 /* ── BASE ────────────────────────────────────────────────── */
@@ -84,6 +85,7 @@ body {
 /* ── TYPOGRAPHY ──────────────────────────────────────────── */
 .font-serif  { font-family: var(--font-serif), Georgia, serif; }
 .font-sans   { font-family: var(--font-sans), system-ui, sans-serif; }
+.font-chalk  { font-family: var(--font-chalk), cursive; }
 
 /* ── SHIMMER CTA ─────────────────────────────────────────── */
 @keyframes shimmer {
@@ -132,27 +134,119 @@ body {
 
 /* ── ARDOISE (blackboard) ────────────────────────────────── */
 .ardoise {
-  background: #1c1e1a;
+  /* Dark slate base with layered noise texture */
+  background-color: #1c1f1b;
+  background-image:
+    /* SVG noise for grain/texture */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.18'/%3E%3C/svg%3E"),
+    /* Subtle horizontal chalk lines */
+    repeating-linear-gradient(
+      180deg,
+      transparent 0px,
+      transparent 28px,
+      rgba(255,255,255,0.025) 28px,
+      rgba(255,255,255,0.025) 29px
+    ),
+    /* Radial vignette for depth */
+    radial-gradient(ellipse at 50% 50%, #252820 0%, #151714 100%);
   position: relative;
-  overflow: hidden;
+  overflow: visible !important;
+  /* Wood frame border */
+  border: 10px solid transparent;
+  background-clip: padding-box;
+  box-shadow:
+    0 0 0 10px #7a5c38,
+    0 0 0 14px #5a3e22,
+    0 0 0 18px #8b6840,
+    0 8px 60px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+  border-radius: 20px !important;
 }
+
+/* Wood-grain overlay on the border */
 .ardoise::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 31px,
-    rgba(255,255,255,0.03) 31px,
-    rgba(255,255,255,0.03) 32px
-  );
+  inset: -10px;
+  border-radius: 22px;
+  background:
+    repeating-linear-gradient(
+      92deg,
+      transparent 0px,
+      transparent 12px,
+      rgba(255,255,255,0.04) 12px,
+      rgba(255,255,255,0.04) 13px
+    ),
+    repeating-linear-gradient(
+      88deg,
+      transparent 0px,
+      transparent 20px,
+      rgba(0,0,0,0.08) 20px,
+      rgba(0,0,0,0.08) 21px
+    );
   pointer-events: none;
+  z-index: -1;
 }
+
+/* Chalk dust smudge overlay */
+.ardoise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(255,255,255,0.03) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.02) 0%, transparent 50%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Chalk font text */
 .ardoise-chalk {
-  font-family: var(--font-serif);
-  color: #f5f0e8;
-  text-shadow: 1px 1px 2px rgba(255,255,255,0.08);
+  font-family: var(--font-chalk), cursive;
+  color: rgba(245, 240, 232, 0.92);
+  text-shadow:
+    0 0 8px rgba(255,255,255,0.12),
+    1px 1px 0 rgba(255,255,255,0.06);
+  letter-spacing: 0.02em;
+}
+
+/* Badge "Menu du jour" punaise */
+.ardoise-badge {
+  position: absolute;
+  top: -14px;
+  right: 24px;
+  background: #f5c842;
+  color: #3a2e08;
+  font-family: var(--font-chalk), cursive;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 6px 16px 8px;
+  border-radius: 3px;
+  box-shadow:
+    0 4px 12px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.3);
+  transform: rotate(1.5deg);
+  z-index: 10;
+  /* Post-it creased look */
+  background-image: linear-gradient(
+    135deg,
+    #f5c842 0%,
+    #f0be30 40%,
+    #e8b428 100%
+  );
+}
+/* Punaise (thumbtack) dot */
+.ardoise-badge::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle at 40% 35%, #e04040, #a01010);
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4), inset 0 -1px 2px rgba(0,0,0,0.2);
 }
 
 /* ── ORGANIC DIVIDER ─────────────────────────────────────── */
@@ -174,6 +268,14 @@ body {
 .nav-blur {
   backdrop-filter: blur(16px) saturate(1.4);
   -webkit-backdrop-filter: blur(16px) saturate(1.4);
+}
+
+/* Glassmorphism navy navbar (on scroll) */
+.navbar-glass {
+  background: rgba(250, 248, 245, 0.88);
+  backdrop-filter: blur(20px) saturate(1.6);
+  -webkit-backdrop-filter: blur(20px) saturate(1.6);
+  border-bottom: 1px solid rgba(44, 62, 107, 0.15);
 }
 
 /* ── SCROLL FADE ─────────────────────────────────────────── */
