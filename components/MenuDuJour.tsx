@@ -124,10 +124,10 @@ function ChalkCourse({
           </span>
         )}
       </div>
-      <p className="ardoise-chalk font-chalk text-lg md:text-xl leading-snug">
+      <p className="ardoise-chalk font-chalk text-lg md:text-xl leading-snug text-white">
         {course.title}
       </p>
-      <p className="font-chalk text-sm text-white/40 mt-0.5 italic">
+      <p className="font-chalk text-sm text-white mt-0.5 italic">
         {course.detail}
       </p>
     </motion.div>
@@ -224,7 +224,7 @@ export default function MenuDuJour() {
                   initial={{ opacity: 0 }}
                   animate={inView ? { opacity: 1 } : {}}
                   transition={{ delay: 0.4 }}
-                  className="font-chalk text-white/35 text-xs tracking-[0.28em] uppercase mb-3 mt-2"
+                  className="font-chalk text-white/70 text-xs tracking-[0.28em] uppercase mb-3 mt-2"
                 >
                   ✦ La Cantine Populaire ✦
                 </motion.p>
@@ -237,7 +237,7 @@ export default function MenuDuJour() {
                   <p className="ardoise-chalk font-chalk text-3xl md:text-4xl mb-1">
                     L'Ardoise
                   </p>
-                  <p className="font-chalk text-white/50 text-base tracking-wide">
+                  <p className="font-chalk text-white text-base tracking-wide">
                     Aujourd'hui
                   </p>
                 </motion.div>
@@ -285,7 +285,7 @@ export default function MenuDuJour() {
                   style={{ backdropFilter: "blur(4px)" }}
                 >
                   <div>
-                    <p className="font-chalk text-white/35 text-xs uppercase tracking-widest mb-1">
+                    <p className="font-chalk text-white text-xs uppercase tracking-widest mb-1">
                       Formule complète
                     </p>
                     <p className="ardoise-chalk font-chalk text-base">
@@ -302,7 +302,7 @@ export default function MenuDuJour() {
                   initial={{ opacity: 0 }}
                   animate={inView ? { opacity: 1 } : {}}
                   transition={{ delay: 1 }}
-                  className="font-chalk text-white/25 text-sm mt-4 text-center italic"
+                  className="font-chalk text-white/80 text-sm mt-4 text-center italic"
                 >
                   ✨ La tourte d'Emilie — légendaire depuis 2018
                 </motion.p>

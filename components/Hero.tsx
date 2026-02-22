@@ -59,7 +59,7 @@ export default function Hero() {
       </div>
 
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate/20 via-slate/55 to-slate/80" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20" />
 
       {/* Organic bottom wave */}
       <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-[0]">
@@ -90,7 +90,10 @@ export default function Hero() {
         </motion.div>
 
         {/* Title — word reveal */}
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-cream mb-8">
+        <h1
+          className="font-serif text-5xl md:text-7xl lg:text-8xl text-cream mb-8"
+          style={{ textShadow: '0 2px 20px rgba(0,0,0,0.8), 0 4px 40px rgba(0,0,0,0.5)' }}
+        >
           {titleWords.map((line, i) => (
             <WordReveal
               key={i}
@@ -106,6 +109,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 1.3 }}
           className="font-sans text-cream/80 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
+          style={{ textShadow: '0 2px 12px rgba(0,0,0,0.7), 0 4px 24px rgba(0,0,0,0.4)' }}
         >
           Augustin et Emilie cuisinent chaque matin ce qu'ils ont envie de te
           servir le midi. Frais. Fait maison. Généreux.{" "}
