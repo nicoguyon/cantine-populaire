@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { href: "#cuisine",  label: "Cuisine" },
@@ -46,13 +47,15 @@ export default function Navbar() {
             className="flex items-center gap-2 group select-none"
             aria-label="Cantine Populaire – accueil"
           >
-            {/* Fork icon */}
-            <span
-              className="text-2xl transition-transform duration-300 group-hover:rotate-12"
-              aria-hidden="true"
-            >
-              🍽️
-            </span>
+            <Image
+              src="/images/cantine-logo.svg"
+              alt="Cantine Populaire"
+              width={48}
+              height={48}
+              className={`h-10 w-10 md:h-12 md:w-12 transition-all duration-300 group-hover:scale-105 ${
+                scrolled ? "" : "brightness-0 invert"
+              }`}
+            />
             <div className="flex flex-col leading-none">
               <span
                 className={`font-chalk text-2xl md:text-3xl tracking-wide transition-colors duration-300 ${
