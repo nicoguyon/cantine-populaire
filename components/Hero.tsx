@@ -58,8 +58,8 @@ export default function Hero() {
         />
       </div>
 
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20" />
+      {/* Gradient overlay — renforcé */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/65 to-black/35" />
 
       {/* Organic bottom wave */}
       <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-[0]">

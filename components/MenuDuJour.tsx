@@ -224,7 +224,7 @@ export default function MenuDuJour() {
                   initial={{ opacity: 0 }}
                   animate={inView ? { opacity: 1 } : {}}
                   transition={{ delay: 0.4 }}
-                  className="font-chalk text-white/70 text-xs tracking-[0.28em] uppercase mb-3 mt-2"
+                  className="font-chalk text-white text-xs tracking-[0.28em] uppercase mb-3 mt-2"
                 >
                   ✦ La Cantine Populaire ✦
                 </motion.p>
@@ -302,7 +302,7 @@ export default function MenuDuJour() {
                   initial={{ opacity: 0 }}
                   animate={inView ? { opacity: 1 } : {}}
                   transition={{ delay: 1 }}
-                  className="font-chalk text-white/80 text-sm mt-4 text-center italic"
+                  className="font-chalk text-white text-sm mt-4 text-center italic"
                 >
                   ✨ La tourte d'Emilie — légendaire depuis 2018
                 </motion.p>
